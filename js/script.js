@@ -3,7 +3,6 @@ gsap.registerPlugin(ScrollTrigger);
 window.onbeforeunload = function () {
   // window.scroll({behavior:'initial', top:100, left:100})
   window.scrollTo(0, 0);
-  console.log('gillllllll')
   // document.location.href='#home';
 }
 
@@ -33,7 +32,7 @@ ScrollTrigger.create({
   trigger:'.hero',
   start:'50% 50%',
   end:'50% 10%',
-  markers: true,
+  // markers: true,
   scrub:3,
 })
 tlHero
