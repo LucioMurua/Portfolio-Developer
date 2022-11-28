@@ -5,7 +5,7 @@
     --color-2: rgb(148, 191, 230);
     --color-3: rgb(229, 229, 229);
     --color-4: rgb(0, 255, 255);
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 body{
@@ -15,13 +15,13 @@ body{
     background-color: var(--color-1);
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
-    overflow: hidden;
+    overflow: visible;
     overflow-x: hidden;
 }
 
 .presentation{
-    display: block;
-    position: absolute;
+    /* display: block; */
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -43,7 +43,17 @@ body{
     padding: 20px;
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
     border-radius: 50px;
+    
 }
+
+/* .presentation__logo--move{
+    top: -45px;
+    transform: translateY(10%);
+    left:0;
+    scale:0.3;
+    animation: ease;
+    transition: 1s;
+} */
 
 .presentation__text{
     color: var(--color-4);
@@ -137,7 +147,7 @@ body{
     width: fit-content;
     height: fit-content;
     position: relative;
-    transform: translateY(-50px);
+    /* transform: translateY(-50px); */
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.511), rgba(0, 0, 0, 0.5)); */
     /* position: absolute; */
     /* right: 10%;
