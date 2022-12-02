@@ -26,7 +26,6 @@ tl.to('body',{overflowY:'visible'});
 
 
 const tlHero = new gsap.timeline()
-
 ScrollTrigger.create({
   animation:tlHero,
   trigger:'.hero',
@@ -36,7 +35,7 @@ ScrollTrigger.create({
   scrub:3,
 })
 tlHero
-.to('.hero__background',{
+  .to('.hero__background',{
     opacity:0,
     x:50,
     y:5,
@@ -111,9 +110,54 @@ tlWall
   animation:tlWall,
   trigger:'.about',
   // markers:true,
-  scrub:2
+  scrub:2,
  })
 
+//  gsap.to('.knowledge__first',{
+  ScrollTrigger.create({
+    trigger:'.knowledge__first',
+    start:'top top',
+    // markers:true,
+    pin:true,
+    pinSpacing:false,
+    snap:1,
+  })
+  ScrollTrigger.create({
+    trigger:'.knowledge__gallery',
+    markers:true,
+    // end:'109% top',
+    pin:true,
+    pinSpacing:false,
+    snap:1
+  })
+  ScrollTrigger.create({
+    trigger:'.knowledge__buttons',
+    // end:'top top',
+    markers:true,
+    pin:true,
+    pinSpacing:false,
+    snap:1
+  })
+
+  const button = document.querySelectorAll('.nav__li')
+  const tlTransition = gsap.timeline()
+  
+  
+  for (var i = 0; i < button.length; i++) {
+    button[i].addEventListener('click', () => {
+      tlTransition
+        gsap.from('.nav__transition',{width:'120vw',
+        height:'120vh',alingSelf:'center', opacity:1})
+        .restart(true)
+        
+      // ScrollTrigger.create({
+      //     animation:tlTransition,
+      //   })
+    });
+}
+
+
+//  ========HORIZONTAL SCROLL============
 //  let sections = gsap.utils.toArray(".panel");
 
 //  gsap.to(sections, {
@@ -123,7 +167,10 @@ tlWall
 //      trigger: ".knowledge",
 //      pin: true,
 //      scrub: 0.1,
-//      snap: 100 / (sections.length - 1),
+//      snap: 1 / (sections.length - 1),
 //      end: () => "+=" + document.querySelector(".knowledge").offsetWidth
 //    }
 //  });
+
+
+
