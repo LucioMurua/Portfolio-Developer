@@ -14,7 +14,7 @@ tl.from('.presentation__logo',{rotate: 800, duration: 2.5, ease: 'elastic'});
 tl.to('.presentation', {backgroundColor: 'rgb(2, 24, 31)'});
 // tl.to('.presentation__logo',{toggleClass:'presentation__logo--move'})
 // tl.to('.presentation__logo',{ease: 'power2',left:0, top:-45, y:'10%',scale:0.3,duration: 1})
-tl.to('.presentation__logo', {opacity:0})
+// tl.to('.presentation__logo', {opacity:0})
 // tl.to('.presentation__logo',{ease: 'power2',left:0, top:45, y:'-10%',scale:1,duration: 1})
 tl.to('.presentation',{opacity:0});
 // tl.from('.hero__text',{x:-50, y:30, opacity:0, duration:2, ease:'power4'})
@@ -146,13 +146,13 @@ tlWall
   for (var i = 0; i < button.length; i++) {
     button[i].addEventListener('click', () => {
       tlTransition
-        gsap.from('.nav__transition',{width:'120vw',
-        height:'120vh',alingSelf:'center', opacity:1})
-        .restart(true)
-        
-      // ScrollTrigger.create({
-      //     animation:tlTransition,
-      //   })
+        // gsap.from('.nav__transition',{width:'120vw',
+        // height:'120vh',alingSelf:'center', opacity:1})
+        .from('.nav__transition',{opacity:1,height:'100vh',y:0,duration:1})
+        .from('.nav',{pointerEvents:'none', duration:1},'<')
+        // .from('.presentation__logo',{opacity:1,scale:1, duration: 1,},)
+        // .to('.presentation__logo',{scale:0, duration:1})
+        // .from('.presentation',{opacity:1, duration:1},'<')
     });
 }
 

@@ -66,16 +66,16 @@ body{
 
 .nav__transition{
     position: fixed;
-    top: 30px;
-    right: 200px;
-    /* transform: translate(80% 50%); */
-    width: 1px;
-    height: 1px;
+    top: 0;
+    right: 0;
+    transform: translateY(50vh);
+    width: 100vw;
+    height: 0;
     background-color: var(--color-3);
     z-index: 20;
     opacity: 0;
     pointer-events: none;
-    border-radius: 500px;
+    /* border-radius: 1000px; */
 }
 
 
@@ -89,6 +89,7 @@ body{
     position: fixed;
     height: 70px;
     z-index: 5;
+    point
 }
 
 .nav__logos{
@@ -156,7 +157,9 @@ body{
 .hero__subtitle{
     font-size: 3rem;
     margin: 0;
+    color: var(--color-4);
 }
+
 
 .hero__background{
     width: fit-content;
