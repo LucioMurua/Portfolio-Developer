@@ -66,18 +66,21 @@ body{
 
 .nav__transition{
     position: fixed;
-    top: 0;
+    /* top: 0; */
     right: 0;
-    transform: translateY(50vh);
+    /* transform: translateY(50vh); */
     width: 100vw;
-    height: 0;
+    height: 0vh;
     background-color: var(--color-3);
     z-index: 20;
-    opacity: 0;
+    opacity: .9;
     pointer-events: none;
     /* border-radius: 1000px; */
 }
 
+.transition2{
+    bottom: 0;
+}
 
 .nav{
     width: 100%;
@@ -89,7 +92,6 @@ body{
     position: fixed;
     height: 70px;
     z-index: 5;
-    point
 }
 
 .nav__logos{
@@ -159,7 +161,6 @@ body{
     margin: 0;
     color: var(--color-4);
 }
-
 
 .hero__background{
     width: fit-content;
@@ -344,7 +345,7 @@ body{
 }
 
 .knowledge__subtitle{
-    font-size: 3rem;
+    font-size: 4rem;
     position: relative;
     color: var(--color-3);
     /* text-align: center; */
@@ -401,6 +402,64 @@ body{
 
 .wide{grid-column: span 2;}
 .tall{grid-row: span 2;}
+
+/* ==========PANEL GALLERY2======== */
+.knowledge__gallery2{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(176, 173, 5);
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; */
+}
+
+.gallery__title{
+    position: absolute;
+    right: 50%;
+    top: 100px;
+    transform: translate(50%);
+}
+
+.gallery__content2{
+    width: 500px;
+    height: 1200px;
+    background-color: var(--color-3);
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* display: grid; */
+    position: absolute;
+    transform: rotate(-90deg) translateY(-22%) translateX(50px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 10px;
+    scroll-snap-type: y mandatory;
+    left: 50%;
+    box-shadow: 0px 0px 50px #000;
+    outline: 2px dotted var(--color-3);
+    outline-offset: 7px;
+
+}
+
+.gallery__img2{
+    height: 450px;
+    width: 450px;
+    transform: rotate(90deg);
+    border-radius: 20px;
+    margin: 10px;
+    object-fit: cover;
+    outline: 3px solid var(--color-3);
+    outline-offset: -10px;
+    filter: grayscale();
+    transition: filter .5s, outline-offset .5s;
+    scroll-snap-align:center;
+}
+
+.gallery__img2:hover{
+    filter: none;
+    outline-offset: 0;
+}
 
 /* ======PANEL BUTTONS====== */
 

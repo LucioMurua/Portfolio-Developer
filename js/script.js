@@ -24,6 +24,24 @@ tl.to('body',{overflowY:'visible'});
 // tl.from('.hero',{opacity:0, duration:.3});
 
 
+// =======NAV TRANSITION=========
+const button = document.querySelectorAll('.nav__li')
+const tlTransition = gsap.timeline()
+
+for (var i = 0; i < button.length; i++) {
+  button[i].addEventListener('click', () => {
+    tlTransition
+    // gsap.from('.transition1',{width:'120vw',
+    // height:'120vh',alingSelf:'center', opacity:1})
+      .from('.transition1',{height:'50vh',duration:1})
+      .from('.transition2',{height:'50vh',duration:1},'<')
+      .from('.nav',{pointerEvents:'none', duration:1},'<')
+      // .from('.presentation__logo',{opacity:1,scale:1, duration: 1,},)
+      // .to('.presentation__logo',{scale:0, duration:1})
+      // .from('.presentation',{opacity:1, duration:1},'<')
+  });
+}
+
 
 const tlHero = new gsap.timeline()
 ScrollTrigger.create({
@@ -131,30 +149,22 @@ tlWall
     snap:1
   })
   ScrollTrigger.create({
-    trigger:'.knowledge__buttons',
-    // end:'top top',
+    trigger:'.knowledge__gallery2',
     markers:true,
     pin:true,
     pinSpacing:false,
     snap:1
   })
+  ScrollTrigger.create({
+    trigger:'.knowledge__buttons',
+    // end:'top top',
+    // markers:true,
+    pin:true,
+    pinSpacing:false,
+    snap:1
+  })
 
-  const button = document.querySelectorAll('.nav__li')
-  const tlTransition = gsap.timeline()
   
-  
-  for (var i = 0; i < button.length; i++) {
-    button[i].addEventListener('click', () => {
-      tlTransition
-        // gsap.from('.nav__transition',{width:'120vw',
-        // height:'120vh',alingSelf:'center', opacity:1})
-        .from('.nav__transition',{opacity:1,height:'100vh',y:0,duration:1})
-        .from('.nav',{pointerEvents:'none', duration:1},'<')
-        // .from('.presentation__logo',{opacity:1,scale:1, duration: 1,},)
-        // .to('.presentation__logo',{scale:0, duration:1})
-        // .from('.presentation',{opacity:1, duration:1},'<')
-    });
-}
 
 
 //  ========HORIZONTAL SCROLL============
@@ -172,5 +182,11 @@ tlWall
 //    }
 //  });
 
+// const galleryScroll = document.querySelector('.gallery__content2');
+
+// galleryScroll.addEventListener('wheel',(evt)=>{
+//   evt.preventDefault();
+//   galleryScroll.scrollLeft += evt.deltaY;
+// })
 
 
