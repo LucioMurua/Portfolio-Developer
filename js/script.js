@@ -150,18 +150,18 @@ tlWall
   })
   ScrollTrigger.create({
     trigger:'.knowledge__gallery2',
-    markers:true,
+    // markers:true,
     pin:true,
     pinSpacing:false,
     snap:1
   })
   ScrollTrigger.create({
     trigger:'.knowledge__buttons',
-    // end:'top top',
+    end:'top top',
     // markers:true,
     pin:true,
     pinSpacing:false,
-    snap:1
+    // snap:1
   })
 
   
@@ -188,5 +188,27 @@ tlWall
 //   evt.preventDefault();
 //   galleryScroll.scrollLeft += evt.deltaY;
 // })
+
+// ===========BUTTONS AND MENU ANIMATIONS=============
+
+const cta1 = document.getElementById('cta1')
+
+const tlButtonsMenu1 = gsap.timeline()
+tlButtonsMenu1
+  .pause()
+  .to('.buttons__ul1',{height:300,opacity:1,duration:.5})
+  .to('.buttons__ul1',{width:500,opacity:1,duration:.5})
+  .to('.buttons__li1',{opacity:1,pointerEvents:'all',duration:.5})
+
+  var menuOpen1 = 0
+  cta1.addEventListener('click',()=>{
+  if (menuOpen1 == 0) {
+    menuOpen1 = 1
+    tlButtonsMenu1.play()
+  }else{
+    menuOpen1 = 0
+    tlButtonsMenu1.reverse()
+  }
+})
 
 

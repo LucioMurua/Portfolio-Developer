@@ -425,7 +425,7 @@ body{
 .gallery__content2{
     width: 500px;
     height: 1200px;
-    background-color: var(--color-3);
+    background-color: var(--color-2);
     /* display: flex; */
     /* flex-direction: column; */
     /* display: grid; */
@@ -439,7 +439,6 @@ body{
     box-shadow: 0px 0px 50px #000;
     outline: 2px dotted var(--color-3);
     outline-offset: 7px;
-
 }
 
 .gallery__img2{
@@ -474,14 +473,72 @@ body{
 }
 
 .buttons__cta1{
-    
+    background-color: var(--color-2);
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+    width: 200px;
+    height: 70px;
+    border-radius: 10px;
+    transition: scale .3s, box-shadow .3s;
 }
+
+.buttons__ul1{
+    background: var(--color-2);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    width: 200px;
+    height: 0px;
+    opacity: 0;
+}
+
+.buttons__li1{
+    text-align: center;
+    width: 80%;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgb(218, 236, 255);
+    cursor: pointer;
+    opacity: 0;
+    transition: scale .3s, box-shadow .3s;
+    pointer-events: none;
+}
+
+.buttons__li1:hover, .buttons__cta1:hover{
+    box-shadow: 5px 5px 10px black;
+    scale: 1.1;
+}
+
+.buttons__li1:active, .buttons__cta1:active{
+    scale: 1;
+    box-shadow: none;
+    transition: .1s;
+}
+
+/* ================================= */
+
+
+
 /* ========= */
 
-/* .header{
+.undefined{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-2);
+}
+
+.header{
     display: none;
 }
 
 .about{
     display: none;
-} */
+}
