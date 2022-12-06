@@ -472,6 +472,27 @@ body{
     align-items: center;
 }
 
+.buttons__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    height: 600px;
+    min-width: 900px;
+}
+
+.buttons__menu1{
+    background-color: rgba(255, 255, 255, 0.373);
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    
+}
+
 .buttons__cta1{
     background-color: var(--color-2);
     border: none;
@@ -525,7 +546,27 @@ body{
 
 /* ================================= */
 
+.buttons__cta2{
+    background:linear-gradient(90deg,rgb(191, 0, 194),rgb(0, 64, 255));
+    border: none;
+    width: 200px;
+    height: 70px;
+    font-size: 1.7rem;
+    font-family: poppins;
+    color: var(--color-3);
+    outline: 2px solid var(--color-3);
+    outline-offset: -5px;
+}
 
+.buttons__cta2:hover{
+    animation: hoverbutton 1s infinite;
+}
+
+@keyframes hoverbutton {
+    0%{background: rgb(191, 0, 194);}
+    50%{background: rgb(0, 64, 255);width: 190px;}
+    100%{background: rgb(191, 0, 194);}
+}
 
 /* ========= */
 
