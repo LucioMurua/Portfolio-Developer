@@ -461,6 +461,7 @@ body{
 }
 
 /* ======PANEL BUTTONS====== */
+/* button1 */
 
 .knowledge__buttons{
     width: 100vw;
@@ -478,9 +479,10 @@ body{
     width: 90%;
     height: 600px;
     min-width: 900px;
+    gap: 10px;
 }
 
-.buttons__menu1{
+.buttons__menu{
     background-color: rgba(255, 255, 255, 0.373);
     width: 100%;
     height: 100%;
@@ -490,6 +492,7 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    position: relative;
     
 }
 
@@ -503,6 +506,7 @@ body{
     height: 70px;
     border-radius: 10px;
     transition: scale .3s, box-shadow .3s;
+    cursor: pointer;
 }
 
 .buttons__ul1{
@@ -544,10 +548,20 @@ body{
     transition: .1s;
 }
 
-/* ================================= */
+/* ========button2=========== */
+/* .buttons__menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.373);
+    border-radius: 10px;
+    position: relative;
+} */
+
 
 .buttons__cta2{
-    background:linear-gradient(90deg,rgb(191, 0, 194),rgb(0, 64, 255));
+    background:linear-gradient(90deg,rgb(191, 0, 194)30%,rgb(0, 64, 255)140%);
     border: none;
     width: 200px;
     height: 70px;
@@ -556,17 +570,95 @@ body{
     color: var(--color-3);
     outline: 2px solid var(--color-3);
     outline-offset: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translateY(-15px);
 }
 
-.buttons__cta2:hover{
-    animation: hoverbutton 1s infinite;
+.buttons__checkbox{display: none;}
+.buttons__cta2:hover{animation: hoverbutton 1s infinite;}
+
+
+.buttons__ul2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background:linear-gradient(90deg,rgb(191, 0, 194)30%,rgb(0, 64, 255) 140%);
+    color: var(--color-3);
+    /* list-style: none; */
+    text-align: center;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: poppins;
+    font-size: 1.7rem;
+    clip-path: circle(0% at 50% 50%);
+    border-radius: 10px;
+    transition: clip-path 1s ease-in-out;
+    outline: 2px solid var(--color-3);
+    outline-offset: -5px;
 }
+
+.buttons__li2{
+    /* height: 140px;
+    width: 140px; */
+    /* line-height: 140px; */
+    /* clip-path: circle(50% at center); */
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+
+.buttons__li2::after{
+    content: "";
+    height: 140px;
+    width: 140px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    /* background-color: green; */
+    clip-path: circle(0 at center);
+    transition: .5s;
+}
+
+.buttons__li2:hover{color: #000;}
+
+.buttons__li2:hover::after{
+    background-color: var(--color-3);
+    clip-path: circle(50% at center);
+    color: #000;
+    z-index: -1;
+}
+
+.buttons__checkbox:checked + .buttons__ul2{clip-path: circle(100% at 50% 50%);}
 
 @keyframes hoverbutton {
     0%{background: rgb(191, 0, 194);}
     50%{background: rgb(0, 64, 255);width: 190px;}
     100%{background: rgb(191, 0, 194);}
 }
+
+/* ==========button3============= */
+.buttons__cta3{
+    width: 200px;
+    height: 70px;
+    background-color: var(--color-3);
+    border: none;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    border-radius: 3px;
+    background-color: rgb(132, 0, 255);
+    color: var(--color-3);
+    font-size: 1.7rem;
+    text-shadow: 2px 2px rgb(49, 49, 49);
+    /* box-shadow: 5px 5px black; */
+}
+
 
 /* ========= */
 

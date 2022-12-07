@@ -197,7 +197,7 @@ const tlButtonsMenu1 = gsap.timeline()
 tlButtonsMenu1
   .pause()
   .to('.buttons__ul1',{height:300,opacity:1,duration:.5})
-  .to('.buttons__ul1',{width:295,opacity:1,duration:.5})
+  .to('.buttons__ul1',{width:285,opacity:1,duration:.5})
   .to('.buttons__li1',{opacity:1,pointerEvents:'all',duration:.5})
 
   var menuOpen1 = 0
