@@ -89,7 +89,6 @@ tlHero
 //   }
 // })
 
-
 gsap.from('.welcome__text', {
   opacity:0,
   scrollTrigger:{
@@ -131,7 +130,7 @@ tlWall
   scrub:2,
  })
 
-//  gsap.to('.knowledge__first',{
+// ==========SNAP PANELS ANIMATION=========
   ScrollTrigger.create({
     trigger:'.knowledge__first',
     start:'top top',
@@ -200,8 +199,8 @@ tlButtonsMenu1
   .to('.buttons__ul1',{width:285,opacity:1,duration:.5})
   .to('.buttons__li1',{opacity:1,pointerEvents:'all',duration:.5})
 
-  var menuOpen1 = 0
-  cta1.addEventListener('click',()=>{
+var menuOpen1 = 0
+cta1.addEventListener('click',()=>{
   if (menuOpen1 == 0) {
     menuOpen1 = 1
     tlButtonsMenu1.play()
@@ -210,5 +209,30 @@ tlButtonsMenu1
     tlButtonsMenu1.reverse()
   }
 })
+const cubeFace = document.getElementById('face2')
+const tlCube3d = gsap.timeline()
+tlCube3d
+  .pause()
+  .to('.buttons__cta3',{y:-200})
+  .to('.cube__face',{background:'radial-gradient(rgb(73, 0, 145),rgb(73, 0, 145))'})
+  .from('.buttons__cube',{scale:0, duration:1,},'<')
+  .to('.buttons__cube',{rotateY:'-450deg', rotateX:'-360deg', ease:'in-out', duration:2.5},'<')
+  .to('.cube__face',{background:'radial-gradient(rgb(132, 0, 255),rgb(73, 0, 145))'})
+  .from('.buttons__face7',{opacity:0,},'<')
+  .to('.buttons__perspective',{perspectiveOrigin:'250px 100px'})
+  // .to('.cube__face',{scrollTrigger:{trigger:'.trigger',toggleClass:'cube__face--animation'}})
+  // .to('.buttons__cube',{rotateX:'-360deg',rotateY:'-450deg',ease:'in-out', duration:2.5},)
+  
+const buttonsCheck = document.getElementById('cta3')
+var cta3Active = 0
 
-
+buttonsCheck.addEventListener('click',()=>{
+  console.log('click')
+  if (cta3Active == 0) {
+    cta3Active = 1
+    tlCube3d.play()
+  } else {
+    cta3Active=0
+    tlCube3d.reverse()
+  }
+})
