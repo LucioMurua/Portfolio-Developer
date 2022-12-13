@@ -213,7 +213,7 @@ const cubeFace = document.getElementById('face2')
 const tlCube3d = gsap.timeline()
 tlCube3d
   .pause()
-  .to('.buttons__cta3',{y:-200})
+  .to('.buttons__cta3',{y:-200, duration:.9,ease:'in-out'})
   .to('.cube__face',{background:'radial-gradient(rgb(73, 0, 145),rgb(73, 0, 145))'})
   .from('.buttons__cube',{scale:0, duration:1,},'<')
   .to('.buttons__cube',{rotateY:'-450deg', rotateX:'-360deg', ease:'in-out', duration:2.5},'<')
@@ -235,4 +235,33 @@ buttonsCheck.addEventListener('click',()=>{
     cta3Active=0
     tlCube3d.reverse()
   }
+})
+
+// ==============SECTION WORKS ANIMATION===========
+
+const worksFirst = gsap.timeline()
+
+worksFirst
+  .from('.works__text--first',{delay: .5,x:-100, duration:2,opacity:0})
+  .from('.works__video--first',{x:100, duration:2,opacity:0},'<')
+
+ScrollTrigger.create({
+  animation: worksFirst,
+  trigger: '.works__video--first',
+  // start:'top 70%',
+  toggleActions: 'restart none none none',
+  // markers:true
+}
+)
+const worksSecond = gsap.timeline()
+
+worksSecond
+  .from('.works__text--second',{delay: .5,x:100, duration:2,opacity:0})
+  .from('.works__video--second',{x:-100, duration:2,opacity:0},'<')
+
+ScrollTrigger.create({
+  animation: worksSecond,
+  trigger: '.works__video--second',
+  // start:'top 70%',
+  toggleActions: 'restart none none none',
 })
