@@ -141,7 +141,7 @@ tlWall
   })
   ScrollTrigger.create({
     trigger:'.knowledge__gallery',
-    markers:true,
+    // markers:true,
     // end:'109% top',
     pin:true,
     pinSpacing:false,
