@@ -128,6 +128,14 @@ body{
     padding: 5px;
     text-decoration: none;
     color: var(--color-3);
+    font-size: 1.1rem;
+    transition: .5s;
+    border-radius: 20%;
+}
+
+.nav__li:hover{
+    color: var(--color-4);
+    box-shadow: 0 0 10px var(--color-4);
 }
 
 /* ========SECTION HERO========= */
@@ -357,7 +365,7 @@ body{
 .gallery__content{
     position: relative;
     width: 90%;
-    height: 80%;
+    height: fit-content;
     background-color: var(--color-3);
     border-radius: 10px;
     padding: 5px;
@@ -770,6 +778,10 @@ body{
     margin-left: 30px;
 }
 
+.works__text--second{
+    margin: 0 30px 0 0;
+}
+
 .works__subtitle{
     font-size: 2rem;
     font-family: poppins,sans-serif;
@@ -852,7 +864,7 @@ body{
 
 .cards{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(260px,auto));
     gap: 100px;
     margin: auto;
     width: 80%;
@@ -872,6 +884,11 @@ body{
     position: relative;
     margin: auto;
     border: 1px solid var(--color-3);
+    transition: scale .5s;
+}
+
+.card:hover{
+    scale: 1.1;
 }
 
 .card__logo{
@@ -909,9 +926,17 @@ body{
     border-radius: 30%;
 }
 
+.github__logo{
+    width: 150px;
+    color: red;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+
 .form{
     background-color: rgb(33, 72, 131);
-    width: 390px;
+    width: 450px;
     height: 450px;
     margin: 2px solid var(--color-3);
     border-radius: 20px 20px 20px 0;
@@ -921,7 +946,7 @@ body{
     align-items: center;
     text-decoration: none;
     position: relative;
-    margin: 0 auto;
+    margin: 50px auto;
     border: 1px solid var(--color-3);
 }
 
@@ -961,11 +986,50 @@ body{
     box-shadow: 2px 2px 10px;
 }
 
-.github__logo{
-    width: 150px;
-    color: red;
-    background-color: #fff;
-    border-radius: 50%;
-    padding: 10px;
+.device{
+    display: none;
 }
 
+
+@media (max-width: 1200px){
+    .page{
+        display: none;
+    }
+    /* .device{
+        display: flex;
+        width: 1500px;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        position: fixed;
+        background-color: var(--color-2);
+        z-index: 100;
+    }
+    
+    .device p{
+        display: block;
+        font-size: 100px;
+        text-align: center;
+        margin: auto;
+        background-color: var(--color-1);
+        color: var(--color-3);
+        width: 90vw;
+        height: 90vh;
+        padding: 400px;
+        position: fixed;
+
+    } */
+
+    .device{
+        display: flex;
+        position: fixed;
+        /* width: 100vw;
+        height: 100vh; */
+        text-align: center;
+        font-size: 15vw;
+        z-index: 100;
+        color: var(--color-3);
+        /* padding: 20vw; */
+        
+    }
+}
