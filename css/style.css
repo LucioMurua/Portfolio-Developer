@@ -990,6 +990,13 @@ body{
     display: none;
 }
 
+.author{
+    color: var(--color-3);
+    font-size: 1.3rem;
+    padding: 20px;
+    text-align: center;
+}
+
 @media (max-width: 1200px){
     .page{
         display: none;
