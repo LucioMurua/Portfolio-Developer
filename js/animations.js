@@ -42,7 +42,7 @@ for (var i = 0; i < button.length; i++) {
   });
 }
 
-
+// =========HERO ANIMATION==========
 const tlHero = new gsap.timeline()
 ScrollTrigger.create({
   animation:tlHero,
@@ -57,6 +57,7 @@ tlHero
     opacity:0,
     x:50,
     y:5,
+    display: "none"
   })
   .to('.hero__text',{
     opacity:0,
@@ -89,6 +90,7 @@ tlHero
 //   }
 // })
 
+// ========WELCOME ANIMATION============
 gsap.from('.welcome__text', {
   opacity:0,
   scrollTrigger:{
@@ -242,8 +244,8 @@ buttonsCheck.addEventListener('click',()=>{
 const worksFirst = gsap.timeline()
 
 worksFirst
-  .from('.works__text--first',{delay: .5,x:-100, duration:2,opacity:0})
-  .from('.works__video--first',{x:100, duration:2,opacity:0},'<')
+  .from('.works__text--first',{delay: .5,x:-100, duration:2,opacity:0,display:"none"})
+  .from('.works__video--first',{x:100, duration:2,opacity:0,display:"none"},'<')
 
 ScrollTrigger.create({
   animation: worksFirst,
@@ -256,8 +258,8 @@ ScrollTrigger.create({
 const worksSecond = gsap.timeline()
 
 worksSecond
-  .from('.works__text--second',{delay: .5,x:100, duration:2,opacity:0})
-  .from('.works__video--second',{x:-100, duration:2,opacity:0},'<')
+  .from('.works__text--second',{delay: .5,x:100, duration:2,opacity:0, display:"none"})
+  .from('.works__video--second',{x:-100, duration:2,opacity:0, display:"none"},'<')
 
 ScrollTrigger.create({
   animation: worksSecond,
