@@ -134,7 +134,7 @@ tlWall
 
 // ==========SNAP PANELS ANIMATION=========
   ScrollTrigger.create({
-    trigger:'.knowledge__first',
+    trigger:'.knowledge__panel1',
     start:'top top',
     // markers:true,
     pin:true,
@@ -142,7 +142,7 @@ tlWall
     snap:1,
   })
   ScrollTrigger.create({
-    trigger:'.knowledge__gallery',
+    trigger:'.knowledge__panel2',
     // markers:true,
     // end:'109% top',
     pin:true,
@@ -150,14 +150,14 @@ tlWall
     snap:1
   })
   ScrollTrigger.create({
-    trigger:'.knowledge__gallery2',
+    trigger:'.knowledge__panel3',
     // markers:true,
     pin:true,
     pinSpacing:false,
     snap:1
   })
   ScrollTrigger.create({
-    trigger:'.knowledge__buttons',
+    trigger:'.knowledge__panel4',
     end:'top top',
     // markers:true,
     pin:true,
@@ -197,8 +197,8 @@ const cta1 = document.getElementById('cta1')
 const tlButtonsMenu1 = gsap.timeline()
 tlButtonsMenu1
   .pause()
-  .to('.buttons__ul1',{height:300,opacity:1,duration:.5})
-  .to('.buttons__ul1',{width:285,opacity:1,duration:.5})
+  .from('.buttons__ul1',{height:0,opacity:0,duration:.5})
+  .from('.buttons__ul1',{width:"50%",duration:.5})
   .to('.buttons__li1',{opacity:1,pointerEvents:'all',duration:.5})
 
 var menuOpen1 = 0
